@@ -78,6 +78,9 @@ function appendDisplay(num) {
 }
 
 function clearDisplay() {
+  op = null;
+  a = undefined;
+  b = undefined;
   display.textContent = "";
 }
 
