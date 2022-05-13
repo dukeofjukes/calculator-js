@@ -63,3 +63,12 @@ button:hover {
 #equals {
   grid-row: span 2;
 }
+
+#equals:hover {
+  background-color: var(--nord14);
+}
+
+#clear:hover,
+#backspace:hover {
+  background-color: var(--nord11);
+}
