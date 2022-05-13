@@ -20,6 +20,13 @@ opBtns.forEach((btn) =>
     if (display.textContent === "") {
       return;
     }
+
+    if (op != null) {
+      // if an op has already been selected (chaining), perform that op first
+      b = Number(display.textContent);
+      clearDisplay();
+      operate(op, a, b);
+    }
     a = Number(display.textContent);
     clearDisplay();
     op = getOp(btn.id);
@@ -41,6 +48,11 @@ equalsBtn.addEventListener("click", () => {
   b = Number(display.textContent);
   clearDisplay();
   operate(op, a, b);
+
+  // reset
+  op = null;
+  a = Number(display.textContent);
+  b = undefined;
 });
 
 /* define functions */
