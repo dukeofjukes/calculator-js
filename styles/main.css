@@ -1,22 +1,54 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+
+* {
+  font-family: "Cascadia Code", sans-serif;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: black;
+  color: white;
 }
 
 .card {
-  max-width: 600px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
+
 .card .display {
+  font-size: 24px;
+  text-align: right;
+
   border-width: 4px;
   border-style: dotted;
   border-color: red;
 }
 
 .card .button-container {
+  border-width: 4px;
+  border-style: dotted;
+  border-color: red;
   display: grid;
-  grid-template-columns: repeat(3, 60px);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  font-size: 16px;
+}
+
+#equals {
+  grid-row: span 2;
+}
+
+#zero {
+  grid-column: span 2;
 }
