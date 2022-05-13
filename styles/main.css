@@ -63,7 +63,3 @@ button:hover {
 #equals {
   grid-row: span 2;
 }
-
-#zero {
-  grid-column: span 2;
-}

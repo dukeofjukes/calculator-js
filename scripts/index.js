@@ -3,6 +3,8 @@
 const display = document.querySelector(".display");
 const opBtns = [...document.querySelectorAll(".op")];
 const numBtns = [...document.querySelectorAll(".num")];
+const decimalBtn = document.querySelector("#decimal");
+const negateBtn = document.querySelector("#negate");
 const clearBtn = document.querySelector("#clear");
 const backspaceBtn = document.querySelector("#backspace");
 const equalsBtn = document.querySelector("#equals");
@@ -33,9 +35,23 @@ opBtns.forEach((btn) =>
   })
 );
 
-numBtns.forEach((btn) =>
-  btn.addEventListener("click", () => appendDisplay(btn.textContent))
-);
+numBtns.forEach((btn) => {
+  btn.addEventListener("click", () => appendDisplay(btn.textContent));
+});
+
+decimalBtn.addEventListener("click", () => {
+  if (display.textContent.includes(".")) {
+    return;
+  }
+  display.textContent += ".";
+});
+
+negateBtn.addEventListener("click", () => {
+  if (display.textContent === "" || display.textContent === ".") {
+    return;
+  }
+  display.textContent = -1 * Number(display.textContent);
+});
 
 clearBtn.addEventListener("click", () => clearDisplay());
 
