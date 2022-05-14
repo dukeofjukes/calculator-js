@@ -124,6 +124,6 @@ function divide(a, b) {
   return a / b;
 }
 
-function operate(op, a, b) {
-  display.textContent = op(a, b);
+function operate(oper, a, b) {
+  display.textContent = oper(a, b);
 }
