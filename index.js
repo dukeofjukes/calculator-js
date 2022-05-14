@@ -31,6 +31,7 @@ opBtns.forEach((btn) =>
     }
     a = Number(display.textContent);
     clearDisplay();
+    b = undefined;
     op = getOp(btn.id);
   })
 );
@@ -78,9 +79,6 @@ function appendDisplay(num) {
 }
 
 function clearDisplay() {
-  op = null;
-  a = undefined;
-  b = undefined;
   display.textContent = "";
 }
 
